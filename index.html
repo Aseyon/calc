@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sorteador de números e calculadora em uma interface simples e organizada.">
+  <title>Sorteador & Calculadora</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Painel</p>
+      <h1 id="page-title">Sorteador &<br><strong>calculadora</strong></h1>
+    </section>
+
+    <div class="tools-grid">
+      <section class="tool-card" aria-labelledby="draw-title">
+        <header class="card-header">
+          <h2 id="draw-title">Sorteador</h2>
+          <p>Digite a quantidade de números a serem sorteados entre os valores iniciais e finais</p>
+        </header>
+
+        <form id="sorteador-form" novalidate>
+          <div class="fields">
+            <label class="field">
+              <span>Quantidade</span>
+              <input
+                id="quantidade"
+                name="quantidade"
+                type="number"
+                min="1"
+                max="100"
+                step="1"
+                inputmode="numeric"
+                placeholder="Ex.: 5"
+                required
+              >
+            </label>
+
+            <label class="field">
+              <span>Valor inicial</span>
+              <input
+                id="de"
+                name="de"
+                type="number"
+                step="1"
+                inputmode="numeric"
+                placeholder="Ex.: 1"
+                required
+              >
+            </label>
+
+            <label class="field">
+              <span>Valor final</span>
+              <input
+                id="ate"
+                name="ate"
+                type="number"
+                step="1"
+                inputmode="numeric"
+                placeholder="Ex.: 50"
+                required
+              >
+            </label>
+          </div>
+
+          <div class="draw-options">
+            <label class="check-option">
+              <input id="ordenar" type="checkbox">
+              <span class="check-option__control" aria-hidden="true"></span>
+              Ordenar resultado
+            </label>
+            <span>Sem números repetidos</span>
+          </div>
+
+          <p id="form-message" class="form-message" role="alert" aria-live="polite"></p>
+
+          <div class="actions">
+            <button id="btn-sortear" class="button button--primary" type="submit">
+              <span>Sortear números</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <button id="btn-reiniciar" class="button button--secondary" type="reset" disabled>
+              Limpar
+            </button>
+          </div>
+        </form>
+
+        <div id="resultado" class="result-box" aria-live="polite" aria-atomic="true">
+          <span class="result-box__label">Resultado</span>
+          <div id="result-numbers" class="result-numbers">
+            <p class="result-placeholder">Seus números aparecerão aqui.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tool-card calculator-card" aria-labelledby="calculator-title">
+        <header class="card-header">
+          <h2 id="calculator-title">Calculadora</h2>
+        </header>
+
+        <div class="calculator" aria-label="Calculadora">
+          <div class="calculator__screen">
+            <div id="calc-history" class="calculator__history" aria-live="polite">&nbsp;</div>
+            <input
+              id="display"
+              class="calculator__display"
+              type="text"
+              value="0"
+              aria-label="Visor da calculadora"
+              readonly
+            >
+          </div>
+
+          <div class="calculator__keys" id="calculator-keys">
+            <button class="key key--utility" type="button" data-action="clear">AC</button>
+            <button class="key key--utility" type="button" data-action="sign" aria-label="Inverter sinal">±</button>
+            <button class="key key--utility" type="button" data-action="percent" aria-label="Porcentagem">%</button>
+            <button class="key key--operator" type="button" data-operator="/" aria-label="Dividir">÷</button>
+
+            <button class="key" type="button" data-number="7">7</button>
+            <button class="key" type="button" data-number="8">8</button>
+            <button class="key" type="button" data-number="9">9</button>
+            <button class="key key--operator" type="button" data-operator="*" aria-label="Multiplicar">×</button>
+
+            <button class="key" type="button" data-number="4">4</button>
+            <button class="key" type="button" data-number="5">5</button>
+            <button class="key" type="button" data-number="6">6</button>
+            <button class="key key--operator" type="button" data-operator="-" aria-label="Subtrair">−</button>
+
+            <button class="key" type="button" data-number="1">1</button>
+            <button class="key" type="button" data-number="2">2</button>
+            <button class="key" type="button" data-number="3">3</button>
+            <button class="key key--operator" type="button" data-operator="+" aria-label="Somar">+</button>
+
+            <button class="key key--zero" type="button" data-number="0">0</button>
+            <button class="key" type="button" data-action="decimal" aria-label="Vírgula decimal">,</button>
+            <button class="key key--equals" type="button" data-action="equals" aria-label="Calcular resultado">=</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
