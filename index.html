@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -146,3 +147,87 @@
   </main>
 </body>
 </html>
+=======
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteador do Pretinho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="bg-noise"></div>
+  <div class="bg-pulse"></div>
+  <div class="bg-creatures"></div>
+
+  <main class="wrap">
+
+    <section class="panel">
+      <h1 class="logo" data-text="SORTEADOR">SORTEADOR</h1>
+      <p class="sub">só para pretinhos — se for branco respire com cuidado</p>
+
+      <div class="fields">
+        <label class="label">Quantidade de numerus
+          <input id="quantidade" class="input" type="number" min="1">
+        </label>
+
+        <label class="label">Do numeru
+          <input id="de" class="input" type="number" min="1">
+        </label>
+
+        <label class="label">Ate u numero
+          <input id="ate" class="input" type="number" min="1">
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="btn-sortear" class="btn btn-primary" onclick="sortear()">MACACO</button>
+        <button id="btn-reiniciar" class="btn btn-muted" onclick="reiniciar()">PRETO</button>
+      </div>
+
+      <div id="resultado" class="resultado">
+        <label>numerus roubados: <span>nenhum até agora</span></label>
+      </div>
+    </section>
+
+    <aside class="art">
+      <img src="elliot.png" class="elliot" alt="Elliot">
+    </aside>
+
+  </main>
+
+  <!-- CALCULADORA -->
+  <div class="calculadora-container">
+      <h2>Calculadora</h2>
+
+      <input type="text" id="display" class="display" disabled>
+
+      <div class="botoes">
+          <button class="btn" onclick="add('7')">7</button>
+          <button class="btn" onclick="add('8')">8</button>
+          <button class="btn" onclick="add('9')">9</button>
+          <button class="btn btn-operador" onclick="add('/')">÷</button>
+
+          <button class="btn" onclick="add('4')">4</button>
+          <button class="btn" onclick="add('5')">5</button>
+          <button class="btn" onclick="add('6')">6</button>
+          <button class="btn btn-operador" onclick="add('*')">×</button>
+
+          <button class="btn" onclick="add('1')">1</button>
+          <button class="btn" onclick="add('2')">2</button>
+          <button class="btn" onclick="add('3')">3</button>
+          <button class="btn btn-operador" onclick="add('-')">−</button>
+
+          <button class="btn" onclick="add('0')">0</button>
+          <button class="btn" onclick="add('.')">.</button>
+          <button class="btn btn-operador" onclick="add('+')">+</button>
+          <button class="btn btn-igual" onclick="resultado()">=</button>
+      </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+>>>>>>> 02fb7aab5e367ad81280d9ed5b1fe418030550be

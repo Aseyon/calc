@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   color-scheme: dark;
   --bg: #020611;
@@ -661,3 +662,174 @@ input:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  background: #050506;
+  font-family: "Share Tech Mono", monospace;
+  color: #e6e6e6;
+}
+
+/* BACKGROUNDS */
+.bg-noise, .bg-pulse, .bg-creatures {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bg-noise {
+  background-image: url('img/noise.png');
+  background-size: cover;
+  opacity: 0.06;
+}
+
+.bg-pulse {
+  background: radial-gradient(ellipse at center, rgba(110,8,8,0.08), transparent 55%);
+}
+
+.bg-creatures {
+  background-image: url('img/creatures.png');
+  background-size: cover;
+  opacity: 0.06;
+}
+
+/* LAYOUT */
+.wrap {
+  position: relative;
+  width: 92%;
+  max-width: 1100px;
+  margin: 4vh auto 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+}
+
+.panel {
+  background: rgba(10, 10, 10, 0.92);
+  border: 1px solid rgba(140,18,18,0.18);
+  padding: 34px;
+  border-radius: 8px;
+}
+
+.art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elliot {
+  width: 320px;
+  border-radius: 6px;
+}
+
+/* CAMPOS */
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+  margin-bottom: 18px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input {
+  padding: 14px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* BOTÕES */
+.buttons {
+  display:flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg,#6b0b0b,#3c0000);
+  color: white;
+}
+
+.btn-muted {
+  background: rgba(60,60,60,0.45);
+  color: #ccc;
+}
+
+/* RESULTADO */
+.resultado {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-left: 3px solid rgba(199,43,43,0.9);
+}
+
+/* CALCULADORA — FIX CORRIGIDO */
+.calculadora-container {
+    position: relative;
+    margin: 60px auto 120px;
+    width: 260px;
+    background: rgba(10,10,10,0.92);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,0,0,0.14);
+    box-shadow: 0 0 20px rgba(255,0,0,0.15);
+}
+
+.display {
+    width:100%;
+    height:48px;
+    background:#111;
+    border:1px solid #333;
+    border-radius:8px;
+    color:white;
+    font-size:22px;
+    text-align:right;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+.botoes {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
+}
+
+.btn-operador {
+  background:#3a0a0a;
+}
+
+.btn-igual {
+  background:#ff4444;
+  color:white;
+}
+
+/* CELULAR */
+@media (max-width: 940px) {
+  .wrap { grid-template-columns: 1fr; }
+  .elliot { width: 230px; }
+  .fields { grid-template-columns: 1fr; }
+}
+>>>>>>> 02fb7aab5e367ad81280d9ed5b1fe418030550be
